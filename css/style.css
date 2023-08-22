@@ -1,0 +1,332 @@
+/* Color */
+/* Link a google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap");
+/* margin reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* body */
+body {
+  background-color: rgba(243, 238, 227, 0.8);
+}
+
+main {
+  padding: 50px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+  margin-right: 30px;
+}
+nav img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+.bg-nav {
+  background-color: black;
+}
+
+a.nav-link.active {
+  transition: 0.3s;
+}
+a.nav-link.active:hover {
+  transform: scale(1.1, 1.1);
+  color: orange;
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+footer .bi-whatsapp, footer .bi-instagram {
+  font-size: 30px;
+  transition: 0.3s;
+}
+footer .bi-whatsapp:hover, footer .bi-instagram:hover {
+  color: orange;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*home index*/
+.titulo {
+  margin-top: 80px;
+  font-size: 48px;
+  text-align: center;
+  padding: 15px;
+}
+
+.home {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .card-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.home .card-home p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+/*carousel index*/
+.carousel-item img {
+  border-radius: 10px;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/*card index*/
+.card {
+  padding: 0;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4235294118);
+  animation-name: fade;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/*Galeria Rusticos - Home & Deco */
+.gallery {
+  min-height: 100vh;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(300px, 1fr);
+  grid-template-rows: repeat(3, 300px);
+  grid-template-areas: "a1 a2 a3" "a4 a5 a6" "a7 a8 a9";
+  gap: 50px;
+  padding: 10px;
+  animation-name: fade;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+}
+.gallery_body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery_body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.gallery_body img:hover {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4235294118);
+  transform: scale(1.1);
+}
+
+.a1 {
+  grid-area: a1;
+}
+
+.a2 {
+  grid-area: a2;
+}
+
+.a3 {
+  grid-area: a3;
+}
+
+.a4 {
+  grid-area: a4;
+}
+
+.a5 {
+  grid-area: a5;
+}
+
+.a6 {
+  grid-area: a6;
+}
+
+.a7 {
+  grid-area: a7;
+}
+
+.a8 {
+  grid-area: a8;
+}
+
+.a9 {
+  grid-area: a9;
+}
+
+/* Nosotros */
+.img_about img {
+  object-fit: cover;
+  border-radius: 10px;
+  animation-name: fade;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+.text_about p {
+  text-align: justify;
+}
+
+/*iframe nosotros y contacto*/
+.frame iframe {
+  height: 500px;
+  width: 50%;
+}
+
+/* Contacto */
+.text_contact {
+  font-size: 18px;
+}
+
+.form_contact {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+
+/* Mediaqueries */
+@media only screen and (max-width: 1100px) {
+  main {
+    padding: 40px;
+  }
+  .card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .frame iframe {
+    height: 500px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 30px;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a1 a2" "a3 a4" "a5 a6" "a7 a8" "a9 .";
+    gap: 50px;
+    padding: 10px;
+  }
+  .gallery_body {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery_body img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .frame iframe {
+    height: 400px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main {
+    padding: 20px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    gap: 50px;
+    padding: 10px;
+  }
+  .gallery_body {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery_body img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .frame iframe {
+    height: 400px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .frame iframe {
+    height: 400px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .frame iframe {
+    height: 300px;
+    width: 200px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

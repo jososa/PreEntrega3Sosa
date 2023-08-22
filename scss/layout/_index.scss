@@ -1,0 +1,43 @@
+/*home index*/
+.titulo{
+    margin-top: 80px;
+    font-size: 48px;
+    text-align: center;
+    padding: 15px;
+}
+
+.home {
+    margin-top: 50px;
+    @include flex(column,center);
+
+    .card-home{
+        @include flex(column,center);
+        gap: 30px;
+    
+        p{
+            font-size: 20px;
+            text-align: justify;
+        }
+    }
+}
+
+/*carousel index*/
+.carousel-item img{
+    border-radius: 10px;
+    @include imagenes(100%,600px,cover);
+}
+
+/*card index*/
+.card{
+    padding: 0;
+    box-shadow: 5px 5px 5px 0px $box-shadow-color;
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+
+.card-img-top{
+    @include imagenes(100%,400px,cover);
+}

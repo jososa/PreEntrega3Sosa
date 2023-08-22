@@ -1,0 +1,32 @@
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 50px;
+        margin-right: 30px;
+    }
+    
+    img{
+        @include imagenes(80px,80px,cover);
+        display: inline-block;
+    }
+}
+
+.bg-nav{
+    background-color: $black-color;
+}
+
+a.nav-link.active{
+    transition: .3s;
+    &:hover{
+    transform: scale(1.1,1.1);
+    color: $orange-color;
+    border: 1px solid $orange-color;
+    border-radius: 5px;
+    }
+}

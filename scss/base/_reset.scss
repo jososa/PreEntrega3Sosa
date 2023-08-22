@@ -1,0 +1,19 @@
+/* Link a google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap');
+
+/* margin reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* body */
+body {
+    background-color: $main-color;
+}
+
+main{
+    padding: 50px;
+}

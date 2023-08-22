@@ -1,0 +1,21 @@
+/* Nosotros */
+.img_about img{
+    object-fit: cover;
+    border-radius: 10px;
+
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+.text_about p{
+text-align: justify;
+}
+
+/*iframe nosotros y contacto*/
+.frame iframe{
+    height: 500px;
+    width:  50%;
+}

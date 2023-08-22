@@ -1,0 +1,49 @@
+/*Galeria Rusticos - Home & Deco */
+.gallery {
+    min-height: 100vh;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(300px, 1fr);
+    grid-template-rows: repeat(3,300px);
+    grid-template-areas: 
+    'a1 a2 a3'
+    'a4 a5 a6'
+    'a7 a8 a9';
+    gap: 50px;
+    padding: 10px;
+
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
+
+    &_body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+        img {
+            @include imagenes(100%,100%,cover);
+            border-radius: 10px;
+            transition: .3s;
+
+            &:hover{
+                box-shadow: 5px 5px 5px 0px $box-shadow-color;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.a1{grid-area: a1;}
+.a2{grid-area: a2;}
+.a3{grid-area: a3;}
+.a4{grid-area: a4;}
+.a5{grid-area: a5;}
+.a6{grid-area: a6;}
+.a7{grid-area: a7;}
+.a8{grid-area: a8;}
+.a9{grid-area: a9;}

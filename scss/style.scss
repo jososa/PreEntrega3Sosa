@@ -1,0 +1,15 @@
+//base
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/utilidades';
+
+//componentes
+@import 'components/navbar';
+@import 'components/footer';
+
+//layout
+@import 'layout/index';
+@import 'layout/rusticos_home_deco';
+@import 'layout/nosotros';
+@import 'layout/contacto';
+@import 'layout/mediaqueries';
